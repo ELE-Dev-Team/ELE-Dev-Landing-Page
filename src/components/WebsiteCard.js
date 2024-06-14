@@ -12,13 +12,9 @@ const WebsiteCard = ({ website }) => {
         <h3 className="text-2xl font-bold mb-2">{website.name}</h3>
         <p className="mb-4">{website.description}</p>
         <div className="mt-4 w-full relative">
-          <iframe
-            src={website.url}
-            className="w-full h-96 border-2 border-gray-300 rounded-lg"
-            title={website.name}
-            sandbox="allow-same-origin allow-scripts"
-          ></iframe>
-        </div>
+        <iframe src={website.url} title={website.title} className="w-full h-96" />
+        <div className="absolute inset-0 bg-transparent z-10 pointer-events-none"></div>
+      </div>
       </div>
     </a>
   );
