@@ -1,0 +1,54 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #0ea5e9, 0 0 10px #0ea5e9, 0 0 15px #0ea5e9, 0 0 20px #0ea5e9, 0 0 25px #0ea5e9, 0 0 30px #0ea5e9, 0 0 35px #0ea5e9;
+  }
+  50% {
+    box-shadow: 0 0 10px #0ea5e9, 0 0 20px #0ea5e9, 0 0 30px #0ea5e9, 0 0 40px #0ea5e9, 0 0 50px #0ea5e9, 0 0 60px #0ea5e9, 0 0 70px #0ea5e9;
+  }
+  100% {
+    box-shadow: 0 0 5px #0ea5e9, 0 0 10px #0ea5e9, 0 0 15px #0ea5e9, 0 0 20px #0ea5e9, 0 0 25px #0ea5e9, 0 0 30px #0ea5e9, 0 0 35px #0ea5e9;
+  }
+}
+
+.particles {
+  animation: glow 2s infinite;
+}
+
+.flex {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex .relative {
+    overflow-y: auto;
+  }
+}
